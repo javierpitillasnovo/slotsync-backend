@@ -15,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @SpringBootApplication
 @EnableJpaAuditing
-@EnableCaching
+// @EnableCaching  // Temporarily disabled - enable when Redis is configured
 @EnableAsync
 @EnableScheduling
 public class SlotSyncApplication {
