@@ -38,7 +38,7 @@ public interface BookingRepository extends JpaRepository<Booking, Long>, JpaSpec
     );
 
     @Query("SELECT b FROM Booking b WHERE b.business.id = :businessId " +
-           "AND DATE(b.startTime) = CURRENT_DATE " +
+           "AND CAST(b.startTime AS DATE) = CURRENT_DATE " +
            "AND b.status NOT IN ('CANCELLED', 'NO_SHOW') " +
            "ORDER BY b.startTime ASC")
     List<Booking> findTodayBookingsByBusiness(@Param("businessId") Long businessId);
