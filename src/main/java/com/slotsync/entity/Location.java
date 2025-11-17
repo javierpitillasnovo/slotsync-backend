@@ -47,10 +47,8 @@ public class Location extends BaseEntity {
     @Column(length = 50)
     private String country;
 
-    @Column(precision = 10, scale = 7)
     private Double latitude;
 
-    @Column(precision = 10, scale = 7)
     private Double longitude;
 
     @Size(max = 20)

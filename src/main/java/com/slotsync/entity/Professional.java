@@ -45,7 +45,7 @@ public class Professional extends BaseEntity {
     @Column(name = "accepts_online_bookings")
     private Boolean acceptsOnlineBookings = true;
 
-    @Column(name = "rating_average", precision = 3, scale = 2)
+    @Column(name = "rating_average")
     private Double ratingAverage = 0.0;
 
     @Column(name = "total_reviews")
