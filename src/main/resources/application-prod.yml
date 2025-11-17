@@ -16,16 +16,16 @@ spring:
   # JPA/Hibernate
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     show-sql: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: false
 
-  # Flyway
+  # Flyway - Disabled until migrations are created
   flyway:
-    enabled: true
+    enabled: false
     baseline-on-migrate: true
     locations: classpath:db/migration
 
